@@ -1,4 +1,8 @@
 from google import genai
+from dotenv import load_dotenv
+
+load_dotenv()
+
 print("App starting...")
 client = genai.Client()
 permanent_instruction = """You are a helpful AI Engineering mentor.
