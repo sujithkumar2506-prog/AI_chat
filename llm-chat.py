@@ -70,7 +70,12 @@ def store_vectors(chunks):
         chunk_embedding = np.array(result.embeddings[0].values)
         vector_store[i+1] = {
             'context' : chunk,
-            'embedding' : chunk_embedding
+            'embedding' : chunk_embedding,
+            'metadata': {
+        'document': 'company_policy.pdf',
+        'page': None,
+        'type': None
+    }
         }
 
     return vector_store
